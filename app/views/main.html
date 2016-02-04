@@ -1,0 +1,29 @@
+<div>
+  <h2>Orders</h2>
+
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Weight</th>
+            <th>Destination</th>
+            <th>Date</th>
+            <th>Weight</th>
+            <th>Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="order in orders">
+            <td ng-bind="order.name"></td>
+            <td ng-bind="order.weight"></td>
+            <td ng-bind="order.destination"></td>
+            <td>{{order.creation_date | date:"MM/dd/yyyy"}}</td>
+            <td ng-bind="order.client_id"></td>
+            <td><a href="javascript:;">Action</a></td>
+        </tr>
+        
+    </tbody>
+</table>
+</div>
